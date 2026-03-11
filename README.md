@@ -39,3 +39,32 @@ Tomorrow: Chain Rule & Derivatives —
           how AI figures out which direction to improve.
 
 Confidence today: 8/10 🚀
+
+## Day 02 — March 10, 2026
+
+**Topics:** HashMaps, LeetCode, Micrograd
+
+1. Learned HashMaps deeply via GeeksForGeeks.
+   Key insight: O(1) lookup vs O(n) list search.
+   On 1 million numbers -> HashMaps are 1 million
+   times faster than brute force. This is why they
+   matter in production AI systems.
+
+2. Solved LeetCode #49 (Group Anagrams) and
+   #1 (Two Sum).
+   Approach: brute force first, then HashMap.
+   Two Sum complexity improvement:
+   Brute force = O(n²) → HashMap = O(n)
+
+3. Watched Karpathy's Micrograd tutorial.
+   Built Value class with add + mul operations.
+   New tools discovered:
+   -> graphviz: visualize computation graphs
+   -> __repr__: customize object string output
+
+Every day is a new learning.
+Very excited to build again tomorrow! 🚀
+
+Tomorrow: Micrograd continuation+ Leetcode
+
+Confidence: 8/10
