@@ -65,6 +65,37 @@ Confidence today: 8/10 🚀
 Every day is a new learning.
 Very excited to build again tomorrow! 🚀
 
-Tomorrow: Micrograd continuation+ Leetcode
+Tomorrow: Movie Sentiment Analyzer project+ Leetcode
 
 Confidence: 8/10
+
+## Day 03 - March 11, 2026
+Today was such an exciting day — probably one of the best starts I could have asked for!
+What I built:
+Started my first project in the 60-day AI journey — the Movie Sentiment Analyzer. Completed the data pipeline and model training (Days 3-5). Still to come: Streamlit web app and deployment.
+
+What I learned:
+The goal is to predict whether a movie review is positive or negative using machine learning.The goal is to predict whether a movie review is positive or negative using machine learning.
+-> Imported and explored the IMDB 50k movie review dataset from Kaggle using Pandas
+-> Cleaned raw text data (removed HTML tags, lowercased everything)
+-> Checked for missing values — dataset was perfectly clean with zero nulls
+-> Visualized sentiment distribution using Matplotlib
+-> Converted text to numbers using TF-IDF vectorization
+-> Split data into 80% training and 20% testing sets
+-> Trained a Logistic Regression model on the vectorized data
+-> Evaluated the model and hit 89.47% accuracy 🎉
+
+Tools used: Python, Pandas, Scikit-learn, TF-IDF, Logistic Regression, Google Colab
+
+Hardest Part:
+Finding the bug that was killing my accuracy. I was getting 54-55% accuracy for a long time — barely better than random guessing. After a lot of debugging I discovered two issues: first, I wasn't cleaning the text before vectorization. But even after fixing that, accuracy stayed low. Eventually I realized I had used fit_transform on the test data instead of just transform — causing data leakage. The model was being trained and tested on completely different vocabularies! One tiny bug, huge impact. That's the biggest lesson of the day.
+
+Fun part:
+Everything honestly — the whole process of building something from scratch, seeing the accuracy jump from 54% to 89.47% after fixing the bug was incredibly satisfying.
+
+LeetCode:
+Solved #242 Valid Anagram and #217 Contains Duplicate using HashMaps and HashSets.
+Ahead of schedule: Completed Days 3, 4 and 5 in a single sitting!!
+
+Tomorrow: Streamlit web app for the sentiment analyzer, LeetCode, and theory.
+Confidence today: 9/10
