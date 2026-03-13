@@ -102,7 +102,7 @@ Confidence today: 9/10
 
 ## Day 04 - March 12, 2026
 Today was another productive day — and a historic one with my first ever AI app deployed live on the internet!
-LeetCode:
+1)LeetCode:
 Solved #128 Longest Consecutive Sequence using a HashSet approach.
 
 Started with a sorting approach (O(n log n)) but optimized to O(n) using HashSet
@@ -115,7 +115,7 @@ Was iterating over nums instead of nums_set — caused Time Limit Exceeded on la
 
 Both bugs fixed and solution accepted! ✅
 
-Project 1 — Completed & Deployed! 🎉
+2)Project 1 — Completed & Deployed! 🎉
 Finished and deployed the Movie Sentiment Analyzer live on Streamlit Cloud:
 
 Built Streamlit web app with text input, confidence score and color bar
@@ -128,3 +128,31 @@ Watched 3Blue1Brown Essence of Calculus Episode 1 — introduction to derivative
 Tools used: Python, Streamlit, Scikit-learn, Pickle, GitHub
 Tomorrow: LeetCode, Theory (Calculus Ep 2), Start Project 2 — Image Classifier with PyTorch 🐱
 Confidence today: 8/10
+
+## Day 05 - March 13, 2026
+Another eventful day — pushed further into deep learning territory with Project 2!
+1)LeetCode:
+Solved two problems today:
+#349 Intersection of Two Arrays — Used HashSet approach. Looped through one set and checked membership in the other. Key learning: don't overcomplicate — the simplest solution is often the best one!
+#167 Two Sum II — Introduced a brand new pattern today: Two Pointers. Since the array is sorted, used a left and right pointer moving inward. Much more efficient than brute force O(n²) approach.
+2)Project 2 — Image Classifier (Started) 🖼️
+Began building the Image Classifier using PyTorch and CIFAR-10 dataset (60,000 images across 10 classes):
+
+Set up GPU runtime in Colab
+Downloaded CIFAR-10 dataset using torchvision
+Learned about transforms pipeline — ToTensor() + Normalize()
+Created DataLoader with batch size of 32
+Visualized first batch of images in a 2×5 grid
+
+-> Key Learnings today:
+
+Why we train in mini-batches — GPU memory + better generalization
+CHW vs HWC format — PyTorch stores images as (Channels, Height, Width) but Matplotlib needs (Height, Width, Channels)
+Normalization — scaling pixel values to -1 to 1 makes training faster
+You don't need to memorize code — understand the WHY and look up the HOW
+
+3)Theory:
+Watched 3B1B Essence of Calculus Episode 2 — the paradox of instantaneous speed and how derivatives solve it using limits. The connection to gradient descent in neural networks is becoming clearer!
+Tools used: Python, PyTorch, torchvision, Matplotlib, Google Colab
+Tomorrow: Build first CNN from scratch + training loop 🧠
+Confidence today: 7/10
