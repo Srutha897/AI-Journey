@@ -99,3 +99,32 @@ Ahead of schedule: Completed Days 3, 4 and 5 in a single sitting!!
 
 Tomorrow: Streamlit web app for the sentiment analyzer, LeetCode, and theory.
 Confidence today: 9/10
+
+## Day 04 - March 12, 2026
+Today was another productive day — and a historic one with my first ever AI app deployed live on the internet!
+LeetCode:
+Solved #128 Longest Consecutive Sequence using a HashSet approach.
+
+Started with a sorting approach (O(n log n)) but optimized to O(n) using HashSet
+Key insight: a number is only the start of a sequence if num - 1 is not in the set
+Hit two bugs along the way:
+
+longest variable was inside the while loop instead of outside — caused wrong answer for single element arrays
+Was iterating over nums instead of nums_set — caused Time Limit Exceeded on large inputs with duplicates
+
+
+Both bugs fixed and solution accepted! ✅
+
+Project 1 — Completed & Deployed! 🎉
+Finished and deployed the Movie Sentiment Analyzer live on Streamlit Cloud:
+
+Built Streamlit web app with text input, confidence score and color bar
+Added 3 example review buttons using session state
+Deployed live — anyone in the world can use it now!
+Live URL: https://movie-sentiment-analyzer-v4k7rzwgqy2rweqvbdvjjt.streamlit.app/
+
+Theory:
+Watched 3Blue1Brown Essence of Calculus Episode 1 — introduction to derivatives and the intuition behind them. Will be important for understanding how neural networks learn next week.
+Tools used: Python, Streamlit, Scikit-learn, Pickle, GitHub
+Tomorrow: LeetCode, Theory (Calculus Ep 2), Start Project 2 — Image Classifier with PyTorch 🐱
+Confidence today: 8/10
