@@ -135,7 +135,7 @@ Another eventful day — pushed further into deep learning territory with Projec
 Solved two problems today:
 #349 Intersection of Two Arrays — Used HashSet approach. Looped through one set and checked membership in the other. Key learning: don't overcomplicate — the simplest solution is often the best one!
 #167 Two Sum II — Introduced a brand new pattern today: Two Pointers. Since the array is sorted, used a left and right pointer moving inward. Much more efficient than brute force O(n²) approach.
-2)Project 2 — Image Classifier (Started) 🖼️
+2)Project 2 — Image Classifier (Started) 
 Began building the Image Classifier using PyTorch and CIFAR-10 dataset (60,000 images across 10 classes):
 
 Set up GPU runtime in Colab
@@ -154,5 +154,51 @@ You don't need to memorize code — understand the WHY and look up the HOW
 3)Theory:
 Watched 3B1B Essence of Calculus Episode 2 — the paradox of instantaneous speed and how derivatives solve it using limits. The connection to gradient descent in neural networks is becoming clearer!
 Tools used: Python, PyTorch, torchvision, Matplotlib, Google Colab
-Tomorrow: Build first CNN from scratch + training loop 🧠
+Tomorrow: Build first CNN from scratch + training loop 
+Confidence today: 7/10
+
+## Day 6 -March 14, 2026
+A deep learning day — Constructed CNNs and watched a model learn from scratch in real time!
+1)LeetCode:
+#11 Container With Most Water — Two Pointers pattern. Start with widest container, move the shorter wall inward each time. Key insight: moving the shorter wall is the only way to potentially find more water.
+#125 Valid Palindrome — Two Pointers again. Skip non-alphanumeric characters with isalnum(), compare from both ends moving inward. Wrote this one cleanly from scratch with no hints — big confidence boost! ✅
+2)Theory — 3B1B Neural Networks Chapter 1:
+Finally understood what's actually happening inside a neural network:
+
+Data flows through input → hidden layers → output
+Each connection has a weight — not just 0 to 1, but any number including negative
+Model starts with random weights and gradually adjusts them to reduce loss
+Loss function measures how wrong predictions are
+Optimizer adjusts weights after every batch to reduce that loss
+This connection to Calculus Ep 2 clicked today — derivatives tell the optimizer exactly which direction to adjust weights!
+
+3)Project 2 — CNN Built and Trained! 
+Built a full CNN from scratch in PyTorch and trained it on CIFAR-10 (60,000 images, 10 classes):
+Architecture:
+Input (3, 32, 32)
+→ Conv1 + ReLU + MaxPool → (32, 16, 16)
+→ Conv2 + ReLU + MaxPool → (64, 8, 8)
+→ Flatten → 4096
+→ FC1 + ReLU → 512
+→ FC2 → 10 classes
+Training results:
+Epoch 1:  Loss 1.304 → Accuracy 53%
+Epoch 5:  Loss 0.378 → Accuracy 86%
+Epoch 10: Loss 0.092 → Accuracy 97%
+Watched the model go from random guessing (53%) to 96.89% in 10 epochs — seeing loss drop and accuracy climb in real time was incredible!
+Problem discovered — Overfitting:
+
+Training accuracy: 96.89%
+Test accuracy: 70.05%
+
+The model memorized training data instead of learning general patterns — like a student who memorizes answers instead of understanding the subject. Will tackle this tomorrow using Transfer Learning with ResNet50!
+
+Key Learnings:
+What overfitting is and why it happens
+Why test accuracy is more important than training accuracy
+How Conv layers, ReLU and MaxPool work together
+The full training loop: Forward pass → Loss → Backward pass → Update weights
+
+Tools used: Python, PyTorch, torchvision, Google Colab, GPU (CUDA)
+Tomorrow: Fix overfitting using Transfer Learning with ResNet50 — target 90%+ test accuracy! 🎯
 Confidence today: 7/10
