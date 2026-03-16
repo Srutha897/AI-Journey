@@ -202,3 +202,42 @@ The full training loop: Forward pass → Loss → Backward pass → Update weigh
 Tools used: Python, PyTorch, torchvision, Google Colab, GPU (CUDA)
 Tomorrow: Fix overfitting using Transfer Learning with ResNet50 — target 90%+ test accuracy! 🎯
 Confidence today: 7/10
+
+## Day 7 - March 15, 2026
+"Always trust the process — you'll eventually get there!" 💪
+A massive day of learning — went from 70% to 90.94% test accuracy and understood exactly why every decision mattered!
+1) LeetCode:
+-> #3 Longest Substring Without Repeating Characters — First Sliding Window problem! Used HashSet + two pointers. Window expands right, shrinks from left when duplicate found. Key optimization: use a Set not a List for O(1) lookup instead of O(n).
+-> #424 Longest Repeating Character Replacement — Trickier Sliding Window. Key insight: you don't actually replace characters — you just check if window size - most frequent character count ≤ k. If not, shrink from left. Took a few attempts but got there!
+2)Theory — 3B1B Neural Networks Chapter 2 (Gradient Descent):
+
+-> Weights and biases are adjusted after every batch based on how wrong the model was
+. Gradient descent = finding the lowest point in a loss landscape
+. Model starts with random weights → calculates loss → adjusts weights slightly → repeats millions of times
+. Connected directly to Calculus Ep 2 — derivatives tell the optimizer which direction to adjust weights!
+. loss.backward() = calculate gradients, optimizer.step() = adjust weights
+
+3) Project 2 — Transfer Learning with ResNet50 🚀
+Today's full results:
+Approach                   Train Accuracy       Test Accuracy
+CNN from scratch             96.89%             70.05% (overfit!)
+ResNet50 last layer only     81.70%             ~80%
+ResNet50 + fine tuning       97.60%             90.94% ✅
+
+-> Key Learnings:
+. Overfitting & Early Stopping:
+If we train to 100% accuracy the model starts memorizing instead of learning. When a new image appears it says "I never saw this exact image!" and fails. Early stopping catches the sweet spot where the model learned general features without memorizing specific examples.
+. The 32x32 vs 224x224 Bug:
+ResNet50 was trained on ImageNet with 224x224 images. Its architecture is specifically designed for that size — feeding 32x32 CIFAR-10 images crushed the features to nothing by the final layers → only 42% accuracy. After resizing to 224x224 → 90.94%! Always check the expected input size in model documentation before using pretrained models!
+. Why Transfer Learning Works:
+Early layers learned universal features (edges, textures) → frozen, kept intact
+Layer4 learned ImageNet-specific features → unfrozen, adapted to CIFAR-10
+Final layer replaced entirely for our 10 classes
+Result: 23 million params of existing knowledge + fine tuning = 90.94% in minutes!
+
+. Why 90.94% > 70.05% (not just Transfer Learning):
+The CNN from scratch overfit badly (97% train, 70% test). ResNet50 with fine tuning generalized properly because it already understood visual features deeply — it learned WHAT cats look like, not just WHICH training images were cats.
+
+Tools used: Python, PyTorch, torchvision, ResNet50, Google Colab, GPU (CUDA)
+Tomorrow: Build Gradio web app + deploy on HuggingFace Spaces 🖼️
+Confidence today: 8.5/10
