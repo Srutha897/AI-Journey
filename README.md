@@ -280,6 +280,6 @@ Why airplane got 99% airplane + 1% bird — both have wings, model was intellige
 
 Also scored 10/10 on a quiz covering everything from Days 3-8 — TF-IDF, overfitting, backpropagation, transfer learning! 💪
 Tools used: Python, PyTorch, torchvision, ResNet50, Gradio, HuggingFace Spaces
-Live URL: [https://huggingface.co/spaces/yourusername/cifar10-image-classifier](https://huggingface.co/spaces/srutha4/cifar10-image-classifier)
+Live URL: [https://huggingface.co/spaces/srutha4/cifar10-image-classifier](https://huggingface.co/spaces/srutha4/cifar10-image-classifier)
 Tomorrow: Start Project 3 — PDF Chat App using LangChain + RAG! 💬
 Confidence today: 8.5/10
