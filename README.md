@@ -241,3 +241,45 @@ The CNN from scratch overfit badly (97% train, 70% test). ResNet50 with fine tun
 Tools used: Python, PyTorch, torchvision, ResNet50, Google Colab, GPU (CUDA)
 Tomorrow: Build Gradio web app + deploy on HuggingFace Spaces 🖼️
 Confidence today: 8.5/10
+
+## Day 8 - March 16,2026
+Another huge day — Project 2 is now live on HuggingFace Spaces with 91% accuracy!
+1) LeetCode:
+#344 Reverse String — Classic Two Pointers problem. Used left and right pointers swapping characters inward. Key thing: modify the list in place — no returning a new list!
+#567 Permutation in String — Sliding Window + HashMap combined. Instead of generating all permutations (impossible for long strings!), used a fixed size window of len(s1) sliding through s2. Compared character frequency maps — if they match, a permutation exists. Clean O(n) solution!
+2) Theory — 3B1B Neural Networks Chapter 3 (Backpropagation):
+The clearest explanation of how neural networks actually learn:
+
+We cannot change activations directly — only weights and biases
+Model makes prediction → checks how wrong it was → goes backwards through the network
+For each weight asks: "Did increasing this weight make things better or worse?"
+Nudges weights up or down based on their contribution to the error
+Highly active neurons get nudged more — barely active neurons barely change
+This backward correction process = Backpropagation
+Connected directly to loss.backward() in our PyTorch code!
+
+3) Project 2 — Image Classifier DEPLOYED! 🎉
+Full journey today:
+
+Saved trained ResNet50 model using torch.save()
+Built Gradio web app with image upload + top 3 predictions
+Deployed live on HuggingFace Spaces
+Tested with real images — 100% cat, 99% airplane, 100% frog!
+
+Test Results:
+CNN from scratch:        70.05% test accuracy
+ResNet50 last layer:     81.70% training accuracy  
+ResNet50 + fine tuning:  91.03% test accuracy ✅
+Key Learnings today:
+
+Gradio is specifically designed for AI model demos — much easier than Streamlit for image tasks
+HuggingFace Spaces = free deployment for AI models
+CPU is enough for inference — GPU only needed for training
+The Flag button in Gradio = users can report wrong predictions for model improvement
+Why airplane got 99% airplane + 1% bird — both have wings, model was intelligently uncertain!
+
+Also scored 10/10 on a quiz covering everything from Days 3-8 — TF-IDF, overfitting, backpropagation, transfer learning! 💪
+Tools used: Python, PyTorch, torchvision, ResNet50, Gradio, HuggingFace Spaces
+Live URL: [https://huggingface.co/spaces/yourusername/cifar10-image-classifier](https://huggingface.co/spaces/srutha4/cifar10-image-classifier)
+Tomorrow: Start Project 3 — PDF Chat App using LangChain + RAG! 💬
+Confidence today: 8.5/10
