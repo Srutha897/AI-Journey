@@ -283,3 +283,64 @@ Tools used: Python, PyTorch, torchvision, ResNet50, Gradio, HuggingFace Spaces
 Live URL: [https://huggingface.co/spaces/srutha4/cifar10-image-classifier](https://huggingface.co/spaces/srutha4/cifar10-image-classifier)
 Tomorrow: Start Project 3 — PDF Chat App using LangChain + RAG! 💬
 Confidence today: 8.5/10
+
+## Day 9 - March 17, 2026
+A deeply satisfying day — started the most in-demand AI skill right now: RAG with LangChain!
+1) LeetCode:
+1.1) #215 Kth Largest Element — Solved using Min Heap approach. Maintained a heap of size k — the smallest element in the heap is always the kth largest overall. Key insight: heap only guarantees smallest at index 0, rest is NOT sorted — that's what makes it faster than sorting at O(n log k)!
+1.2) #33 Search in Rotated Sorted Array — Binary Search on a rotated array. The trick: check which half is sorted first, then determine if target falls in that half. If yes → search that half, if no → search the other. Reduced time complexity from O(n) to O(log n)! 💪
+2) Theory — LangChain for LLM Application Development (3 Lessons):
+2.1) Lesson 1 — Models, Prompts and Parsers:
+PromptTemplate allows reusable prompts with variables — change tone, language style etc. Instead of hardcoding prompts, create templates that work dynamically with different inputs. This is how production AI apps handle prompts!
+2.2) Lesson 2 — Memory:
+Ever wondered how ChatGPT, Gemini or Claude remember your previous messages? The entire conversation history is sent with every new message! Different memory types handle this differently:
+
+BufferMemory → stores everything word for word
+TokenBufferMemory → stores up to X tokens only
+SummaryMemory → summarizes old conversations to save space
+
+2.3) Lesson 3 — Chains:
+Chains connect multiple AI steps into one pipeline. Router chains find relevant data from uploaded content — like routing math questions to a math chain and physics questions to a physics chain. This directly powers the PDF Chat App!
+
+3)Project 3 — PDF Chat App Started! 💬
+Built the complete RAG pipeline today:
+"Attention Is All You Need" paper (15 pages)
+        ↓
+PyPDFLoader → extracted text from all 15 pages
+        ↓
+RecursiveCharacterTextSplitter → 52 chunks
+(chunk_size=1000, overlap=200)
+        ↓
+OpenAI Embeddings → converted chunks to vectors
+        ↓
+ChromaDB → stored 52 vectors on disk
+        ↓
+RetrievalQA Chain → connected ChromaDB to GPT-3.5
+        ↓
+Answered questions accurately! ✅
+Test Results — Model answering from the paper:
+Q: What is the attention mechanism?
+A: Mapping a query and key-value pairs to output via weighted sum ✅
+
+Q: How many attention heads?
+A: 8 attention heads ✅
+
+Q: What optimizer was used?
+A: Adam optimizer ✅
+
+Q: What datasets were used?
+A: WMT 2014 English-German, English-French datasets ✅
+
+Key Learnings:
+-> RAG = Retrieval Augmented Generation — find relevant chunks → feed to GPT → get accurate answers
+-> ChromaDB searches by MEANING not just keywords — semantic search!
+-> Chunk overlap prevents context loss at chunk boundaries
+-> Always hide API keys — never push to GitHub! Use Colab Secrets for safety
+-> LangChain updates frequently — always check latest import paths!
+
+⭐Tools used: Python, LangChain, OpenAI API, ChromaDB, PyPDF, Google Colab
+🚀Tomorrow:
+Morning revision of all topics from Days 3-9
+Continue Project 3 — build Streamlit chat interface + deploy!
+
+Confidence today: 7.5/10
