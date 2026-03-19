@@ -344,3 +344,58 @@ Morning revision of all topics from Days 3-9
 Continue Project 3 — build Streamlit chat interface + deploy!
 
 Confidence today: 7.5/10
+
+## Day 10 - March 18, 2026
+A debugging heavy day — but every bug got fixed! 🔧
+1) LeetCode:
+#153 Find Minimum in Rotated Sorted Array — Binary Search pattern again. Key insight: compare nums[mid] with nums[right] to determine which half the minimum is in. If nums[mid] > nums[right] → minimum is in right half. Clean O(log n) solution! ✅
+2) Project 3 — PDF Chat App (Streamlit Interface Built!) 💬
+Built the complete Streamlit interface around yesterday's RAG pipeline:
+Features built:
+
+. PDF uploader in sidebar
+. OpenAI API key input (secure — never hardcoded!)
+. Chat interface with message history
+. Clear conversation button
+. Processing spinner while PDF loads
+. Success message showing chunks created
+
+Bugs encountered and fixed:
+Bug 1: New PDF still answered from old PDF
+→ Cause: ChromaDB reusing same collection
+→ Fix: Added uuid to create unique collection per PDF
+       collection_name = f"pdf_{uuid.uuid4().hex[:8]}"
+
+Bug 2: Old chat messages showing when new PDF uploaded
+→ Cause: Session state not resetting properly
+→ Fix: Added st.rerun() to force immediate refresh
+Testing Results:
+Short stories PDF:
+Q: "What is this PDF about?"
+A: "Collection of children's stories..." ✅
+
+Research paper PDF:
+Q: "What is attention?"
+A: "Maps query and key-value pairs to output..." ✅
+
+Puzzle PDF (scanned):
+→ Garbled text — expected behavior for non-text PDFs
+→ Will add user warning about PDF type limitations
+
+Key Learning Today:
+"Debugging is not failure — it's engineering. Every bug you fix makes you a better developer."
+
+Also learned:
+->uuid for creating unique identifiers
+->ChromaDB collection isolation
+->Streamlit session state management
+->Why scanned PDFs fail text extraction (need OCR)
+
+Tomorrow:
+Deploy on Streamlit Cloud
+Write README
+Project 3 complete! 🎉
+
+Tools used: Python, Streamlit, LangChain, ChromaDB, OpenAI API
+Confidence today: 6/10 — Debugging is hard but every bug got fixed! 💪
+
