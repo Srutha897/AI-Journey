@@ -399,3 +399,23 @@ Project 3 complete! 🎉
 Tools used: Python, Streamlit, LangChain, ChromaDB, OpenAI API
 Confidence today: 6/10 — Debugging is hard but every bug got fixed! 💪
 
+## Day 11 - March 19, 2026
+Short but significant day — Project 3 is now live! 🚀
+Project 3 — PDF Chat App DEPLOYED! 💬
+Deployed the PDF Chat App on Streamlit Cloud. App successfully answers questions from any text-based PDF using RAG (Retrieval Augmented Generation).
+Live test results:
+Q: "What is attention?"
+A: "An attention function maps a query and 
+    key-value pairs to an output..." ✅
+
+Q: "What is transformer architecture?"
+A: "A model that relies entirely on attention
+    mechanism..." ✅
+Live URL: your-streamlit-link
+Portfolio status:
+Project 1: Movie Sentiment Analyzer ✅ Live
+Project 2: Image Classifier ✅ Live
+Project 3: PDF Chat App ✅ Live
+3 projects deployed in 11 days — ahead of schedule! 💪
+Tomorrow: Revision day + start Project 4 (AI Research Agent)
+Confidence today: 7/10 — Tired but kept the streak alive! 🔥
