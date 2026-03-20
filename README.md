@@ -402,7 +402,8 @@ Confidence today: 6/10 — Debugging is hard but every bug got fixed! 💪
 ## Day 11 - March 19, 2026
 Short but significant day — Project 3 is now live! 🚀
 Project 3 — PDF Chat App DEPLOYED! 💬
-Deployed the PDF Chat App on Streamlit Cloud. [Live URL](https://pdf-chat-app-qjcribffrvfykva3f6tv6r.streamlit.app/) 
+Deployed the PDF Chat App on Streamlit Cloud. [https://pdf-chat-app-qjcribffrvfykva3f6tv6r.streamlit.app/]
+
 App successfully answers questions from any text-based PDF using RAG (Retrieval Augmented Generation).
 Live test results:
 Q: "What is attention?"
