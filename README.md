@@ -421,3 +421,28 @@ Project 3: PDF Chat App ✅ Live
 3 projects deployed in 11 days — ahead of schedule! 💪
 Tomorrow: Revision day + start Project 4 (AI Research Agent)
 Confidence today: 7/10 — Tired but kept the streak alive! 🔥
+
+## ## Day 12 - March 20, 2026
+
+Short but focused day — quality over quantity!
+
+**Revision:**
+Deep revision of Project 1 — Movie Sentiment Analyzer.
+Cleared doubts on:
+- train_test_split and what each variable means
+- random_state and why it matters for reproducibility
+- The complete pipeline from raw CSV to deployed app
+
+**LeetCode:**
+**#56 Merge Intervals** — New pattern: Intervals!
+Sort by start time → loop through → merge overlapping.
+Key insight: use max() when merging end points to handle
+edge cases where one interval contains another.
+Solved cleanly without hints! ✅
+
+**Tomorrow:**
+- Revise Project 2 and Project 3
+- LeetCode #57 Insert Interval
+- Start Project 4 — AI Research Agent!
+
+**Confidence today: 7/10**
