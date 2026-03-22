@@ -446,3 +446,29 @@ Solved cleanly without hints! ✅
 - Start Project 4 — AI Research Agent!
 
 **Confidence today: 7/10**
+
+## Day 13 - March 21, 2026
+
+Dedicated revision day — quality over quantity!
+
+**Revision:**
+- Deep revision of Project 2 — CNNs, 
+  Transfer Learning, PyTorch
+- Wrote detailed notes in notebook
+- Learned what gradients are and why 
+  zero_grad() matters
+
+**Quiz Results: 96/100 🎉**
+- TF-IDF ✅
+- Data Leakage ✅  
+- Transfer Learning ✅
+- Training Loop ✅
+- Only minor confusions on data leakage 
+  vs overfitting — now clarified!
+
+**Tomorrow:**
+- LeetCode #57 Insert Interval
+- Revise Project 3
+- Start Project 4 — AI Research Agent!
+
+**Confidence today: 8.5/10**
