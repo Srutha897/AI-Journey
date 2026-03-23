@@ -472,3 +472,19 @@ Dedicated revision day — quality over quantity!
 - Start Project 4 — AI Research Agent!
 
 **Confidence today: 8.5/10**
+
+## Day 14 - March 22, 2026
+Short and focused day — kept the streak alive! 🔥
+1)LeetCode:
+#57 Insert Interval — Intervals pattern continued. Handled 3 cases cleanly:
+
+Intervals ending before new interval → add as is
+Overlapping intervals → merge using min/max
+Intervals starting after new interval → add as is
+
+Key insight: Unlike #56, no sorting needed — input is already sorted! Wrote clean code with comments explaining each section. ✅
+2)Revision:
+Quick revision of Project 3 — RAG pipeline, ChromaDB, chunk overlap and why we used OpenAI over HuggingFace.
+Tomorrow:
+Full energy day — Start Project 4 (AI Research Agent)! 🤖
+Confidence today: 5/10 — Tired but kept the streak! 💪
