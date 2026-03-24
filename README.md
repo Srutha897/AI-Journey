@@ -488,3 +488,25 @@ Quick revision of Project 3 — RAG pipeline, ChromaDB, chunk overlap and why we
 Tomorrow:
 Full energy day — Start Project 4 (AI Research Agent)! 🤖
 Confidence today: 5/10 — Tired but kept the streak! 💪
+
+## Day 15 — March 23, 2026
+It was a practical debugging and systems-integration day. Things I achieved today:
+
+1)Solved LeetCode problem #75 (Sort Colors). Implemented the Dutch National Flag algorithm using three pointers (`low`, `mid`, `high`). Key insight: not incrementing `mid` when swapping with `high` because the incoming element is unprocessed. Reinforced in-place partitioning and one-pass optimization (O(n) time, O(1) space).
+
+2) Started building the 4th project, AI Research Agent. The system takes a query, searches the web, processes results, and generates an answer autonomously — a shift from simple LLM usage to agent-based workflows.
+Set up LangChain, OpenAI API, and DuckDuckGo search in Google Colab. Observed how agents use the ReAct (Reason + Act) pattern to iteratively think, act, and refine outputs.
+
+Ran into multiple real-world issues:
+->Dependency/import errors with LangChain. Instead of deeply modifying the setup, reused the working environment and reran cells to stabilize execution.
+->API key error (`Illegal header value`). Root cause: extra whitespace/newline characters in the key. Fixed by re-entering the API key correctly and rerunning the setup. ---->Also learned the importance of not exposing API keys.
+
+Key realization: a lot of real engineering work is not writing new code, but fixing environment issues, rerunning pipelines, and ensuring everything works end-to-end.
+
+Best moment: Successfully running the agent and seeing it search the web and generate an answer autonomously.
+
+Hardest moment: Debugging setup issues and identifying that the API key formatting was the root cause rather than the code itself.
+
+Tomorrow: Improve the agent output formatting and better understand how to control responses.
+
+Confidence today: 8/10 🤖
