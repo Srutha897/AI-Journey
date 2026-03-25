@@ -510,3 +510,23 @@ Hardest moment: Debugging setup issues and identifying that the API key formatti
 Tomorrow: Improve the agent output formatting and better understand how to control responses.
 
 Confidence today: 8/10 🤖
+
+## Day 16 - March 24, 2026
+What I built:
+1) Completed Project 4 — AI Research Agent. Built a full Streamlit UI on top of the LangChain ReAct agent from Day 15 and deployed it live on Streamlit Cloud.
+2)LeetCode:
+Solved #435 Non-overlapping Intervals. Key insight: sort by end time (greedy) — always keep the interval that ends earliest to leave maximum room for future intervals. Different from #56 Merge Intervals which sorts by start time because the goal is different — here we want to maximize intervals that fit, not merge neighbors.
+-> Project 4 UI:
+
+   Used return_intermediate_steps=True instead of StreamlitCallbackHandler to capture agent thinking steps and render them manually in the UI
+   Built 3 feature cards (ReAct Pattern, Live Web Search, GPT-3.5 Turbo) with colored borders
+   Dark theme with gradient title, purple thinking box, green final answer box
+   st.form for Enter key support on search
+   
+-> Deployment battle:
+   Hit multiple errors on Streamlit Cloud — Python 3.14 incompatibility with LangChain 0.1.20, version conflicts between langchain-core and langchain. Fixed by manually        setting Python 3.11 in Streamlit Cloud settings and pinning correct library versions in requirements.txt. Root cause: forgot requirements.txt before first deploy +          accidentally selected Python 3.14.
+Key lesson:
+   Always create requirements.txt with pinned versions BEFORE deploying. Without it, the platform installs latest everything — which may break older library versions.
+   Live URL: https://researchagent-f5wfyafgyctbcyrjkbg53t.streamlit.app/
+Confidence: 8/10
+Tough deployment but pushed through every error. UI looks professional and portfolio-ready.
