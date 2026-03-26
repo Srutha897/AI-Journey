@@ -530,3 +530,28 @@ Key lesson:
    Live URL: https://researchagent-f5wfyafgyctbcyrjkbg53t.streamlit.app/
 Confidence: 8/10
 Tough deployment but pushed through every error. UI looks professional and portfolio-ready.
+
+## Day 17 - March 25, 2026
+Today was a solid revision day — quiz score of 95/100 shows the concepts are really sticking!
+1) LeetCode:
+Solved #20 Valid Parentheses — first Stack pattern problem.
+
+Key insight: Stack is LIFO — the last opening bracket must be closed first
+Used a closeToOpen dictionary mapping closers to their expected openers
+Two checks on every closing bracket: is stack non-empty? does top match expected opener?
+If either fails → return False immediately. Empty stack at end = True ✅
+
+2) Project 3 Revision — PDF Chat App 🧠
+Revised all core RAG concepts:
+
+Full pipeline: PDF → extract → chunk → embeddings → ChromaDB → retrieve → GPT answers
+Sharpened: chunking isn't just for speed — GPT has a hard context window limit. A 100 page PDF literally cannot be sent in one go
+Sharpened: RecursiveCharacterTextSplitter splits by paragraphs first, then sentences, then characters — smarter than blind cutting
+Scanned PDF limitation: PyPDF returns garbled text because scanned PDFs are images with no text layer. Fix = OCR tools like pytesseract
+
+Quiz Score: 95/100 🎉
+Consistent deep understanding across all RAG concepts — pipeline, ChromaDB, embeddings, UUID bug, QA chain all solid.
+Tools used: Python, LangChain, ChromaDB, OpenAI, Streamlit
+Tomorrow: Project 4 revision + quiz, LeetCode Stack pattern (#155 Min Stack), Job prep — resume update with all 4 projects 🚀
+
+Confidence today: 8/10
