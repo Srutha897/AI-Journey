@@ -555,3 +555,33 @@ Tools used: Python, LangChain, ChromaDB, OpenAI, Streamlit
 Tomorrow: Project 4 revision + quiz, LeetCode Stack pattern (#155 Min Stack), Job prep — resume update with all 4 projects 🚀
 
 Confidence today: 8/10
+
+## Day 18 - March 26, 2026
+Today was a power day — quiz, revision, resume and even a deep dive into how the agent thinks!
+1) LeetCode:
+Solved #155 Min Stack — second Stack pattern problem.
+
+Key insight: use two stacks running in parallel — one for actual values, one tracking the minimum at every state
+Every push → append to both stacks. Every pop → pop from both stacks
+getMin() just returns minStack[-1] → O(1) instant, no looping needed
+Important guard: self.minStack[-1] if self.minStack else val — prevents IndexError on empty stack
+Had the right idea independently before explanation — two stacks approach was correct! ✅
+
+2) Project 4 Revision — AI Research Agent 🧠
+Revised all core concepts:
+
+AI Agent vs LLM: agent plans, uses tools, reasons autonomously — not just question → answer
+ReAct pattern: Reason → Act → Observe loop. Stops when agent has enough info
+max_iterations=10 prevents infinite loops AND protects OpenAI API budget from infinite calls
+handle_parsing_errors=True catches formatting errors → tells agent to retry instead of crashing
+return_intermediate_steps=True captures thinking steps as data → rendered manually in UI
+api_key.strip() removes hidden \n, \r, \t characters that cause LocalProtocolError
+LangChain Tool needs 3 things: name, func, description — better description = better results
+
+Quiz Score: 97/100 🏆 Best quiz score yet! 
+
+3) Agent Search Behavior 🔍
+Discovered why agent sometimes fails on Step 1: GPT-3.5 adds quotes to search queries ("color mixing red and yellow") from training habits. Quoted searches are rigid → irrelevant results. Fix: add "WITHOUT quotes" to tool description. Agent correctly self-corrects in Step 2 — ReAct loop working as designed.
+Tools used: Python, LangChain, PyTorch, Streamlit, ChromaDB, OpenAI
+Tomorrow: Start Project 5 — FastAPI + Railway.app, LeetCode Stack pattern (#232 Implement Queue using Stacks), Job prep continues 🚀
+Confidence today: 9/10
