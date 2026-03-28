@@ -585,3 +585,27 @@ Discovered why agent sometimes fails on Step 1: GPT-3.5 adds quotes to search qu
 Tools used: Python, LangChain, PyTorch, Streamlit, ChromaDB, OpenAI
 Tomorrow: Start Project 5 — FastAPI + Railway.app, LeetCode Stack pattern (#232 Implement Queue using Stacks), Job prep continues 🚀
 Confidence today: 9/10
+
+## Day 19 - March 27, 2026
+Today was a focused job prep day — LinkedIn fully updated and two more Stack problems solved!
+1) LeetCode:
+Solved #232 Implement Queue using Stacks — third Stack pattern problem.
+
+Key insight: two stacks flip the order — pour Stack1 into Stack2 to get FIFO from LIFO
+Only pour when Stack2 is empty — pouring every time would break the order
+Extracted repeated logic into helper method move() — clean software engineering approach
+empty() checks BOTH stacks with and — queue isn't empty if Stack2 still has items even when Stack1 is empty
+Solution was clean and correct on first attempt ✅
+
+2) LinkedIn Updated 💼
+Complete profile overhaul for ML/AI Engineer roles:
+
+Headline: "AI/ML Engineer | Python | LangChain | RAG Pipelines | 4 Deployed AI Projects | Open to Work"
+About section: highlights 4 deployed projects, MS CS GPA 3.67, open to USA roles
+Skills: replaced React/JS skills with ML/AI stack — PyTorch, LangChain, RAG, ChromaDB, NLP, LLMs, Computer Vision etc.
+Added all 4 AI projects with live URLs and tech stack descriptions
+Turned on Open to Work for ML/AI Engineer, Data Scientist, Python Developer roles in USA
+
+Tools used: Python, LangChain, PyTorch, Streamlit, ChromaDB, OpenAI
+Tomorrow: Start Project 5 — Smart URL Content Extractor (FastAPI + BeautifulSoup + GPT-3.5 + Railway.app), LeetCode Stack pattern 🚀
+Confidence today: 8/10
