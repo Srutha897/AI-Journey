@@ -687,7 +687,8 @@ Built a full FastAPI backend with 5 endpoints from scratch:
 
 ⭐Known issue to fix tomorrow:
    Scraper sometimes grabs sidebar content instead of actual job description. 
-   Fix: target specific HTML containers like <main>, <article>, divs with "job-description" class.
+   Fix: target specific HTML containers like main, article, divs with "job-description" class.
+
 Tomorrow:
 Fix scraper, Complete Streamlit frontend, Deploy backend to Railway.app, Deploy frontend to Streamlit Cloud
 
