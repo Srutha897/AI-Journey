@@ -694,3 +694,62 @@ Fix scraper, Complete Streamlit frontend, Deploy backend to Railway.app, Deploy 
 
 Tools used: Python, FastAPI, PyPDF2, BeautifulSoup, OpenAI GPT-3.5, Pydantic, uvicorn
 Confidence today: 8/10
+
+## Day 22 - March 30, 2026
+Today was a MASSIVE day — Project 5 fully built and deployed! First full-stack AI app with separate backend and frontend deployments! 🎉
+⭐Project 5 — AI Resume Analyzer COMPLETE 🚀
+What it does:
+Upload your resume PDF + paste any job description → AI gives instant match score, strengths, missing skills and suggestions powered by GPT-3.5.
+Full pipeline:
+User uploads PDF + pastes job description
+        ↓
+Streamlit frontend (Streamlit Cloud)
+        ↓
+FastAPI backend (Railway.app)
+        ↓
+PyPDF2 extracts resume text
+BeautifulSoup scrapes job URL
+GPT-3.5 analyzes both together
+        ↓
+Returns match score, strengths,
+missing skills, suggestions ✅
+Backend — FastAPI on Railway.app:
+
+⭐5 endpoints: health check, PDF extraction, job scraping, analysis, full analysis
+Scraper targets main content using <main>, <article>, job-description divs
+Improved prompt with CRITICAL INSTRUCTIONS — tells GPT to look everywhere in resume
+Form(...) for receiving files + text together in one request
+job_text_override — paste text directly when URL scraping fails
+
+⭐Frontend — Streamlit on Streamlit Cloud:
+Professional clean UI — light background, blue accents, card shadows
+Radio button outside form → switches between URL and paste text instantly
+Color coded match score — green (70%+), orange (50-70%), red (below 50%)
+Strengths, missing skills, suggestions displayed in clean cards
+
+⭐Deployment — two separate platforms:
+Backend → Railway.app (FastAPI needs always-on server)
+Frontend → Streamlit Cloud (Streamlit's native platform)
+Connected via Railway public URL in frontend requests
+
+Bugs fixed today:
+Form(...) → required when sending files + text together
+Radio button inside form → moved outside so UI updates instantly
+Missing /full-analyze in Railway URL → Method Not Allowed error
+match_score returned as string → wrapped with int() to fix NameError
+job_text_override → added to backend so paste text works properly
+
+Live URLs:
+
+🔧 Backend: [https://web-production-48a5b.up.railway.app]
+🎨 Frontend: [https://ai-resume-analyzer-frontend-studcmhielp9u7jq46lwsz.streamlit.app]
+
+New skills learned:
+Railway.app → deploy FastAPI backend, environment variables, Procfile
+Procfile → tells Railway how to start server (uvicorn main:app --host 0.0.0.0 --port $PORT)
+Two deployment architecture → backend and frontend on separate platforms talking via API
+int() conversion → GPT sometimes returns numbers as strings
+
+Tools used: Python, FastAPI, PyPDF2, BeautifulSoup, OpenAI GPT-3.5, Streamlit, Railway.app, Pydantic, uvicorn
+Tomorrow: LeetCode Stack pattern, update resume + LinkedIn with Project 5, quiz on Projects 4 & 5 🚀
+Confidence today: 8/10
