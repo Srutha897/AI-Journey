@@ -753,3 +753,13 @@ int() conversion → GPT sometimes returns numbers as strings
 Tools used: Python, FastAPI, PyPDF2, BeautifulSoup, OpenAI GPT-3.5, Streamlit, Railway.app, Pydantic, uvicorn
 Tomorrow: LeetCode Stack pattern, update resume + LinkedIn with Project 5, quiz on Projects 4 & 5 🚀
 Confidence today: 8/10
+
+## Day 23, March 31, 2026
+Short day but a meaningful one.
+1) Job Applications:
+Spent the morning actively applying for AI/ML roles. Sent out multiple applications with tailored cover letters across roles including AI Automation Engineer, Junior AI Developer, and LLM Engineer positions. Each cover letter was customized to the specific job description — mapping projects directly to requirements rather than sending generic applications.
+2) LeetCode:
+#121 Best Time to Buy and Sell Stock — Greedy/Sliding Window pattern.
+Tracked two variables — running minimum price and maximum profit — in a single O(n) pass. Key insight: using the global minimum fails because it doesn't respect the constraint that you must buy before you sell. The running minimum naturally enforces order.
+Also hit a motivational wall today. Pushed through it, solved one problem, and proved myself wrong. Sometimes one small win is enough to reset momentum.
+Confidence today: 6/10 — Tough mentally but kept the streak alive. 
