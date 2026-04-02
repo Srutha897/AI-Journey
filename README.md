@@ -763,3 +763,22 @@ Spent the morning actively applying for AI/ML roles. Sent out multiple applicati
 Tracked two variables — running minimum price and maximum profit — in a single O(n) pass. Key insight: using the global minimum fails because it doesn't respect the constraint that you must buy before you sell. The running minimum naturally enforces order.
 Also hit a motivational wall today. Pushed through it, solved one problem, and proved myself wrong. Sometimes one small win is enough to reset momentum.
 Confidence today: 6/10 — Tough mentally but kept the streak alive. 
+
+## Day 24, April 1, 2026
+
+**LeetCode:**
+#53 Maximum Subarray — Kadane's Algorithm!
+
+Key insight: At each element make one decision. Extend current subarray or start fresh. If current sum goes negative, starting fresh wins.
+
+Implemented in O(n) single pass using:
+max(num, current_sum + num)
+
+Handled all-negative edge case correctly by
+initializing with nums[0] instead of 0. ✅
+
+**Job Applications:**
+Actively applying to AI/ML roles on LinkedIn.
+Building application volume consistently.
+
+**Confidence today: 7/10**
