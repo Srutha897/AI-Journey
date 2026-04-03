@@ -782,3 +782,11 @@ Actively applying to AI/ML roles on LinkedIn.
 Building application volume consistently.
 
 **Confidence today: 7/10**
+
+## Dev Log — Day 25, April 2, 2026
+1) LeetCode:
+#150 Evaluate Reverse Polish Notation(Stack pattern)
+Key insight: numbers go onto the stack, operators pop two operands and push the result back. Order of popping matters. Second pop is the left operand, first pop is the right operand. Used int(a/b) instead of // to correctly truncate toward zero for negative numbers.
+2) Revision:
+Reviewed concepts from previous projects: reinforcing understanding of RAG pipelines, agent architecture, and production deployment patterns.
+Confidence today: 7/10
