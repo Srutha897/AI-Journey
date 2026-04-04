@@ -790,3 +790,22 @@ Key insight: numbers go onto the stack, operators pop two operands and push the 
 2) Revision:
 Reviewed concepts from previous projects: reinforcing understanding of RAG pipelines, agent architecture, and production deployment patterns.
 Confidence today: 7/10
+
+## Day 26 - April 3, 2026
+Solid LeetCode day — two HashMap problems solved with optimized approaches
+1) LeetCode:
+#1512 Number of Good Pairs
+
+Brute force first (commented out) → O(n²) nested loop counting matching pairs
+Optimized with HashMap → O(n) single pass
+Key insight: if a number appears n times, the number of pairs = n*(n-1)/2 (combinations formula)
+Example: if 2 appears 4 times → 4*3/2 = 6 pairs 
+
+2) #169 Majority Element
+
+Used HashMap to count frequency of each number
+Tracked running maximum frequency
+Returned element as soon as its count exceeds len(nums)/2
+Key insight: majority element appears more than n/2 times — first element to cross that threshold is the answer 
+
+Confidence today: 8/10
