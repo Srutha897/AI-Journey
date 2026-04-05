@@ -809,3 +809,37 @@ Returned element as soon as its count exceeds len(nums)/2
 Key insight: majority element appears more than n/2 times — first element to cross that threshold is the answer 
 
 Confidence today: 8/10
+
+## Day 27 - April 4, 2026
+Good day today — solved two LeetCode problems and studied some important ML theory that I've been meaning to revisit.
+1) LeetCode:
+#2325 Decode the Message
+Built a character mapping dictionary from the key to the alphabet. Used chr(97) to start from 'a' and increment for each new unique character I found. Skipped spaces when building the mapping, then decoded the message character by character.
+Key insight: chr(97) = 'a', chr(98) = 'b' — ASCII values make character mapping really clean.
+#771 Jewels and Stones
+Looped through stones and checked if each stone matched a jewel. Used a HashMap to track counts and incremented the total whenever there was a match.
+Key insight: checking if i in jewels works directly on a string, but using HashMap makes lookup O(1). 
+Both problems used the same HashMap character frequency/mapping pattern — it's starting to feel natural now.
+2) ML Theory revisited — Overfitting, Underfitting & Bias-Variance Tradeoff:
+Today I revised overfitting vs underfitting and the bias-variance tradeoff:
+Overfitting vs Underfitting:
+Underfitting → model is too simple, performs badly on both train and test data
+Overfitting → model is too complex, performs great on training data but fails on test data
+
+Bias-Variance Tradeoff:
+Bias → error from wrong assumptions, model too simple, misses real patterns
+Variance → model too sensitive to training data, memorizes noise
+Total Error = Bias² + Variance + Irreducible Error
+The goal is always to find the sweet spot where total error is minimized
+
+The bullseye analogy really helped me understand it:
+Low Bias + Low Variance  → hits bullseye consistently 
+High Bias + Low Variance → consistent but always wrong
+Low Bias + High Variance → scattered, unpredictable
+High Bias + High Variance → worst case
+
+How to fix each:
+High Bias → more features, complex model, train longer
+High Variance → more data, regularization (L1/L2), dropout
+
+Confidence today: 7.5/10
