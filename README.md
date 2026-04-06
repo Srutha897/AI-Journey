@@ -843,3 +843,15 @@ High Bias → more features, complex model, train longer
 High Variance → more data, regularization (L1/L2), dropout
 
 Confidence today: 7.5/10
+
+## Day 28 - April 5, 2026
+Short day but kept the streak alive! 
+1) LeetCode:
+#205 Isomorphic Strings
+This one was interesting. The key was realizing I needed TWO hashmaps, not one. One mapping from s → t and another from t → s.
+Why two? Because with just one direction, "badc" and "baba" would incorrectly return True. The reverse mapping catches cases where two different characters in s try to map to the same character in t.
+Used zip(s, t) to iterate both strings simultaneously — clean approach.
+Key insight: both mappings must be consistent. If a character is already mapped, it must map to the same character every time. If it maps to something different → not isomorphic, return False immediately. 
+What I learned today:
+Bidirectional HashMap mapping is a pattern I'll see again — whenever a problem needs a one-to-one relationship between two things, two hashmaps are usually the clean solution.
+Confidence today: 7/10
