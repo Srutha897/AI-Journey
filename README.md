@@ -855,3 +855,44 @@ Key insight: both mappings must be consistent. If a character is already mapped,
 What I learned today:
 Bidirectional HashMap mapping is a pattern I'll see again — whenever a problem needs a one-to-one relationship between two things, two hashmaps are usually the clean solution.
 Confidence today: 7/10
+
+## Day 29 - April 6, 2026
+Productive day — LeetCode, job applications, and ML theory! 
+1) LeetCode: #645 Set Mismatch
+Really elegant solution once I saw it. Used the math trick — if I know what the sum SHOULD be and what the sum actually IS, I can find both the duplicate and the missing number in one go.
+
+actual_sum - set_sum → gives the duplicate (extra value being counted twice)
+expected_sum - set_sum → gives the missing number
+
+Key insight: set(nums) removes duplicates, so comparing sum(set(nums)) vs sum(nums) immediately reveals the duplicate. And comparing against the expected sum n*(n+1)//2 reveals the missing number. No loops needed beyond the built-ins! ✅
+This felt more like a math problem than a coding problem — and I love when that happens.
+2) Job Applications:
+Continued applying to AI/ML roles on LinkedIn. Building application volume consistently.
+3) ML Theory — Evaluation Metrics (Beyond Accuracy):
+Today I learned why accuracy alone can be a liar. If 99% of my data is Class A, a model that always guesses A is 99% accurate — but completely useless. That really clicked for me.
+What I studied:
+Precision vs Recall:
+
+Precision → of everything I predicted as positive, how many were actually positive? 
+Recall → of all actual positives, how many did I catch? 
+The tradeoff: improving one usually hurts the other
+Example: in medical diagnosis, missing a sick patient (low recall) is far worse than a false alarm (low precision)
+
+F1-Score:
+
+Harmonic mean of Precision and Recall
+Better than accuracy when data is imbalanced
+Punishes models that are extremely good at one but terrible at the other
+
+ROC-AUC:
+
+Plots True Positive Rate vs False Positive Rate at different thresholds
+AUC = area under that curve → closer to 1.0 = better model
+Useful for comparing models regardless of threshold
+
+Connection to my projects:
+
+Project 1 (Movie Sentiment) → my dataset was balanced (25k positive, 25k negative) so accuracy was fair to use. If it was imbalanced, I'd need F1-Score instead!
+In real healthcare or fraud detection projects → always use Precision, Recall and F1, never just accuracy
+
+Confidence today: 7.5/10
