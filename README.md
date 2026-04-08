@@ -896,3 +896,47 @@ Project 1 (Movie Sentiment) → my dataset was balanced (25k positive, 25k negat
 In real healthcare or fraud detection projects → always use Precision, Recall and F1, never just accuracy
 
 Confidence today: 7.5/10
+
+## Day 30 - April 7, 2026
+Hit the 30-day mark today! 🎉 Half way through the 60-day journey and still going strong.
+1) Job Applications:
+Continued applying to AI/ML roles actively. Building application volume consistently — focusing on Tier 1 companies where my projects speak louder than LeetCode scores.
+2) SQL:
+Began learning SQL today using SQLite with Python. Covered the fundamentals:
+
+What I learned:
+What a database is — like an Excel sheet with rows and columns
+conn → connection to the database (the handshake)
+cursor → the messenger that runs queries and fetches results
+What practice.db is — SQLite stores everything in one single file, no server needed
+Why .db files look like gibberish in text editors — they're binary files, not plain text
+
+Queries I practiced:
+sql-- Get everything
+SELECT * FROM employees;
+
+-- Filter with WHERE
+SELECT * FROM employees
+WHERE department = 'AI Engineering';
+
+-- Conditions
+WHERE salary > 90000
+WHERE department = 'AI Engineering' AND city = 'Dallas'
+WHERE city = 'Dallas' OR city = 'Austin'
+
+-- Specific columns only
+SELECT name, salary FROM employees
+WHERE salary > 90000;
+Key insights:
+
+Indentation doesn't matter in SQL — it's only for human readability
+* : means all columns
+WHERE filters rows — only returns rows that match the condition
+Train-test split doesn't cause overfitting/underfitting — it's the tool to detect it
+
+Tomorrow:
+Continue SQL — ORDER BY, LIMIT, GROUP BY, JOINs
+LeetCode — get back on track with Trees pattern
+Job applications
+
+Confidence today: 8/10 
