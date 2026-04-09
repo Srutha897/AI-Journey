@@ -940,3 +940,38 @@ LeetCode — get back on track with Trees pattern
 Job applications
 
 Confidence today: 8/10 
+
+## Day 31 - April 8, 2026
+What I did today:
+1) Solved LeetCode #645 — Set Mismatch
+2) Applied to a few jobs
+3) Rest day after 30 days of intense sprinting
+
+-> LeetCode #645 — Set Mismatch
+Used a set to track seen numbers, found the duplicate by checking if a value already existed in the set, then found the missing number by iterating 1 to n and checking what wasn't in the set.
+pythonclass Solution:
+    def findErrorNums(self, nums: List[int]) -> List[int]:
+        s = set()
+        duplicate = 0
+        missing = 0
+        for i in range(len(nums)):
+            val = nums[i]
+            if nums[i] not in s:
+                s.add(val)
+            else:
+                duplicate = val
+        for i in range(1, len(nums)+1):
+            if i not in s:
+                missing = i
+        return (duplicate, missing)
+Time complexity: O(n)
+Space complexity: O(n) — set stores up to n elements
+What I understood:
+Sets give O(1) lookup which makes duplicate detection efficient
+Two separate passes — one to find duplicate, one to find missing
+Clean separation of concerns
+
+Honest reflection:
+Tired day after 30 days of non-stop building. Kept the streak alive anyway. That matters more than the problem difficulty today.
+Streak: 31 days ✅
+Confidence today : 6/10
