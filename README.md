@@ -949,21 +949,6 @@ What I did today:
 
 -> LeetCode #645 — Set Mismatch
 Used a set to track seen numbers, found the duplicate by checking if a value already existed in the set, then found the missing number by iterating 1 to n and checking what wasn't in the set.
-pythonclass Solution:
-    def findErrorNums(self, nums: List[int]) -> List[int]:
-        s = set()
-        duplicate = 0
-        missing = 0
-        for i in range(len(nums)):
-            val = nums[i]
-            if nums[i] not in s:
-                s.add(val)
-            else:
-                duplicate = val
-        for i in range(1, len(nums)+1):
-            if i not in s:
-                missing = i
-        return (duplicate, missing)
 Time complexity: O(n)
 Space complexity: O(n) — set stores up to n elements
 What I understood:
