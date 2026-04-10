@@ -1,0 +1,18 @@
+Day 32 - April 9, 2026
+Today's Progress:
+
+Solved 4 LeetCode problems
+Interview prep session
+
+LeetCode Problems:
+#2114 — Maximum Number of Words in Sentences
+Iterated through sentences, split each by space, tracked maximum length.
+#771 — Jewels and Stones
+Used a set for O(1) lookups to efficiently count matching stones and jewels.
+#1108 — Defanging IP Address
+Iterated through address string, replaced dots with [.]
+#2011 — Final Value After Operations
+Parsed each operation string, incremented or decremented counter accordingly.
+Interview Prep:
+Continued structured preparation for technical screens across AI/ML and SWE roles.
+Streak: 32 days ✅
