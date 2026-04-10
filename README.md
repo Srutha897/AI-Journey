@@ -960,3 +960,29 @@ Honest reflection:
 Tired day after 30 days of non-stop building. Kept the streak alive anyway. That matters more than the problem difficulty today.
 Streak: 31 days ✅
 Confidence today : 6/10
+
+## Day 32 — April 9, 2026
+
+### Today's Progress
+- Solved 4 LeetCode problems  
+- Completed interview prep session  
+
+### LeetCode Problems
+- **#2114 — Maximum Number of Words in Sentences**  
+  Iterated through sentences, split by spaces, and tracked the maximum word count.
+
+- **#771 — Jewels and Stones**  
+  Used a set for O(1) lookups to efficiently count matching characters.
+
+- **#1108 — Defanging IP Address**  
+  Iterated through the string and replaced "." with "[.]".
+
+- **#2011 — Final Value After Operations**  
+  Parsed each operation and incremented/decremented a counter accordingly.
+
+### Interview Prep
+Continued structured preparation for technical interviews (AI/ML + SWE roles).
+
+### Reflection
+**Lesson learned:** Keep going until you reach the end.  
+**Confidence level:** 8/10
