@@ -1,0 +1,12 @@
+# Contains Duplicates
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        count=0
+        seen={}
+        for num in nums:
+            if num in seen:
+                return True
+            seen[num]=True
+        print(seen)
+        return False
