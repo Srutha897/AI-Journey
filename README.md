@@ -986,3 +986,17 @@ Continued structured preparation for technical interviews (AI/ML + SWE roles).
 ### Reflection
 **Lesson learned:** Keep going until you reach the end.  
 **Confidence level:** 8/10
+
+## Day 33 - April 10, 2026
+Today's Progress:
+
+**#Solved LeetCode #242 — Valid Anagram**
+**Applied for jobs**
+**Developed targeted application strategy**
+
+LeetCode #242 — Valid Anagram
+Used a hashmap to track character frequencies. Iterated through both strings, compared counts to determine if they're anagrams.
+Approach: O(n) time | O(n) space
+Application Strategy:
+Developed a targeted strategy for specific companies — focusing on role alignment and tailoring approach accordingly.
+COnfidence: 8/10
