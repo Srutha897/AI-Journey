@@ -1000,3 +1000,14 @@ Approach: O(n) time | O(n) spac
 Application Strategy:
 Developed a targeted strategy for specific companies — focusing on role alignment and tailoring approach accordingly.
 COnfidence: 8/10
+
+## Day 34 - April 11, 2026
+Today's Progress:
+
+Solved LeetCode #347 — Top K Frequent Elements
+
+LeetCode #347 — Top K Frequent Elements
+Used a hashmap to count frequencies, then a min-heap of size k to efficiently track the top k elements. When heap exceeds k, pop the minimum frequency element.
+Time: O(n log k) | Space: O(n)
+Key concepts applied: defaultdict, heapq, min-heap pattern for top-k problems.
+Confidence: 8/10
