@@ -4,20 +4,14 @@ from typing import List
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        # 1. Count frequencies using defaultdict
+       
         count = defaultdict(int)
         for num in nums:
             count[num] += 1
-            
-        # 2. Use a min-heap to keep track of top k elements
-        # We store tuples of (frequency, element)
         heap = []
         
         for num, freq in count.items():
             heapq.heappush(heap, (freq, num))
-            # If heap size exceeds k, remove the element with the lowest frequency
             if len(heap) > k:
                 heapq.heappop(heap)
-        
-        # 3. Extract the elements from the heap
         return [num for freq, num in heap]
