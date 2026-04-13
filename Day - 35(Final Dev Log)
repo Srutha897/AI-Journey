@@ -1,0 +1,18 @@
+Day 35 - April 12, 2026 — The End of the Journey 🎉
+Today I'm wrapping up my 35-day AI journey. This is my final dev log.
+
+1) Looking Back — What I Built:
+In 35 days I built and deployed 5 end-to-end AI applications from scratch: 🎬 Movie Sentiment Analyzer — 89.47% accuracy, TF-IDF + Logistic Regression, deployed on Streamlit Cloud. This is where I learned what data leakage really means — fixing it took accuracy from 54% to 89.47%. 🖼️ CIFAR-10 Image Classifier — 90.94% accuracy, ResNet50 Transfer Learning, deployed on HuggingFace Spaces. This is where I saw overfitting with my own eyes — 96% train, 70% test — and fixed it with transfer learning. 💬 PDF Chat App — End-to-end RAG pipeline with LangChain, ChromaDB, and GPT-3.5, deployed on Streamlit Cloud. This is where I understood what RAG really means beyond the acronym. 🔍 AI Research Agent — Autonomous ReAct agent with live web search, deployed on Streamlit Cloud. This is where agents clicked for me — not just a chatbot, but something that thinks and acts. 📄 AI Resume Analyzer — Full stack FastAPI backend on Railway.app + Streamlit frontend. My most complex project. First time doing two-platform deployment, first time with FastAPI, first time with BeautifulSoup scraping.
+
+2) LeetCode Progress (Days 31-35):
+#645 Set Mismatch — Used a set to find duplicate and missing number. Two passes, O(n) time. Kept the streak alive on a tired day — that one mattered more than the difficulty. #2114 Maximum Number of Words — Split sentences, tracked max word count. #771 Jewels and Stones — Set for O(1) lookups, efficient character matching. #1108 Defanging IP Address — Simple string iteration and replacement. #2011 Final Value After Operations — Parsed operations, tracked counter. #242 Valid Anagram — HashMap frequency counting, O(n) time. #347 Top K Frequent Elements — HashMap + min-heap of size k. O(n log k). First time using heapq properly — this one felt like a real step up. Total: 35+ problems solved across 9 patterns.
+
+3) What I Actually Learned:
+Beyond the code, here's what this journey taught me: Consistency beats intensity. Day 23 was the hardest — hit a motivational wall, felt like quitting. Solved one problem anyway. That decision mattered more than any technical skill I picked up. Debugging is a skill. Every single project had bugs that took hours to fix. The data leakage bug, the UUID contamination, the Python 3.14/LangChain conflict, the Form(...) issue in FastAPI — each one taught me more than any tutorial could. Building beats watching. RAG made sense when I built the PDF Chat App. Agents made sense when I built the Research Agent. FastAPI made sense when I built the Resume Analyzer. Theory without building is just words.
+
+4) Where I Am Today:
+Projects: 5 deployed AI apps LeetCode: 35+ problems, 9 patterns Skills: Python, PyTorch, LangChain, FastAPI, RAG, Agents, ChromaDB, BeautifulSoup, SQL basics, Streamlit, Gradio Deployments: Streamlit Cloud, HuggingFace, Railway.app
+
+5) What's Next:
+The journey doesn't stop here — the daily habits do. Learning continues. 
+Final Confidence: 8.5/10
